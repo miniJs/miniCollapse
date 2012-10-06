@@ -1,0 +1,28 @@
+{
+  "name": "miniCollapse",
+  "title": "Minicollapse",
+  "description": "Add collapsible content with ease",
+  "version": "0.1.0",
+  "homepage": "https://github.com/miniJs/miniCollapse",
+  "author": {
+    "name": "Matthieu Aussaguel",
+    "email": "matthieu.aussaguel@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/miniJs/miniCollapse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miniJs/miniCollapse/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/miniJs/miniCollapse/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">= 1"
+  },
+  "keywords": []
+}

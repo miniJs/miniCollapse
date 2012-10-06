@@ -1,0 +1,17 @@
+{
+  "name": "miniboilerplate",
+  "title": "MiniBoilerplate",
+  "version": "1.1.0",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt travis"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.16",
+    "grunt-coffee": "0.0.6",
+    "grunt-growl": "0.1.2",
+    "grunt-jasmine-runner": "0.5.5"
+  }
+}
