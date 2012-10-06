@@ -22,15 +22,13 @@ jQuery(function() {
     };
     this.init = function() {
       this.settings = $.extend({}, this.defaults, options);
-      this.callSettingFunction('callback', [this.$element, this.getSetting('message')]);
       return this.setState('ready');
     };
     this.init();
     return this;
   };
   $.miniCollapse.prototype.defaults = {
-    message: 'hello word',
-    callback: function() {}
+    message: 'hello word'
   };
   return $.fn.miniCollapse = function(options) {
     return this.each(function() {

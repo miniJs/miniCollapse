@@ -2,10 +2,7 @@
 describe('miniCollapse', function() {
   var options;
   options = {
-    message: 'Hello World',
-    callback: function(element, text) {
-      return $(element).append("" + text + "!");
-    }
+    message: 'Hello World'
   };
   beforeEach(function() {
     loadFixtures('fragment.html');
@@ -26,11 +23,10 @@ describe('miniCollapse', function() {
     return it('should overwrites the settings', function() {
       var plugin;
       plugin = new $.miniCollapse(this.$element, options);
-      expect(plugin.settings.message).toBe(options.message);
-      return expect(plugin.settings.callback).toBe(options.callback);
+      return expect(plugin.settings.message).toBe(options.message);
     });
   });
-  describe('plugin state', function() {
+  return describe('plugin state', function() {
     beforeEach(function() {
       return this.plugin = new $.miniCollapse(this.$element);
     });
@@ -40,22 +36,6 @@ describe('miniCollapse', function() {
     return it('should be updatable', function() {
       this.plugin.setState('new state');
       return expect(this.plugin.getState()).toBe('new state');
-    });
-  });
-  describe('plugin logic', function() {
-    return it('should execute the callback method', function() {
-      this.$element.miniCollapse(options);
-      return expect(this.$element).toHaveText('Hello World!');
-    });
-  });
-  return describe('callback', function() {
-    return it('should execute the callback with the correct arguments', function() {
-      options = {
-        message: options.message,
-        callback: jasmine.createSpy('callback')
-      };
-      new $.miniCollapse(this.$element, options);
-      return expect(options.callback).toHaveBeenCalledWith(this.$element, "Hello World");
     });
   });
 });

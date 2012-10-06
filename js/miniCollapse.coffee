@@ -34,7 +34,6 @@ jQuery ->
 
     @init = ->
       @settings = $.extend( {}, @defaults, options )
-      @callSettingFunction( 'callback', [ @$element, @getSetting( 'message' ) ] ) 
 
       @setState 'ready'
 
@@ -47,7 +46,6 @@ jQuery ->
   # default plugin settings
   $.miniCollapse::defaults =
       message: 'hello word'  # option description
-      callback: ->           # callback description
 
   $.fn.miniCollapse = ( options ) ->
     this.each ->
